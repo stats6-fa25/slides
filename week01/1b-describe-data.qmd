@@ -539,8 +539,10 @@ $$s= \sqrt{1.484} = 1.218195 \text{ hr}$$
 ::: {.column width="50%"}
 
 ```{r}
-summarize(hotel_bookings, 
-          mean(lead_time))
+summarize(
+  hotel_bookings, 
+  mean(lead_time)
+  )
 ```
 
 ::: 
@@ -562,8 +564,10 @@ mean(hotel_bookings$lead_time)
 ::: {.column width="50%"}
 
 ```{r}
-summarize(hotel_bookings, 
-          median(lead_time))
+summarize(
+  hotel_bookings, 
+  median(lead_time)
+  )
 ```
 
 ::: 
@@ -586,8 +590,10 @@ median(hotel_bookings$lead_time)
 ::: {.column width="50%"}
 
 ```{r}
-summarize(hotel_bookings, 
-          min(lead_time))
+summarize(
+  hotel_bookings, 
+  min(lead_time)
+  )
 ```
 
 ::: 
@@ -611,8 +617,10 @@ In a similar fashion maxiumum can be found by using the `max()` function.
 ::: {.column width="50%"}
 
 ```{r}
-summarize(hotel_bookings, 
-          sd(lead_time))
+summarize(
+  hotel_bookings, 
+  sd(lead_time)
+  )
 ```
 
 ::: 
@@ -634,8 +642,10 @@ sd(hotel_bookings$lead_time)
 ::: {.column width="50%"}
 
 ```{r}
-summarize(hotel_bookings, 
-          var(lead_time))
+summarize(
+  hotel_bookings, 
+  var(lead_time)
+  )
 ```
 
 ::: 
@@ -709,9 +719,11 @@ We can get multiple summaries with one `summarize()` function.
 
 
 ```{r}
-summarize(hotel_bookings,
-          mean(lead_time),
-          median(lead_time))
+summarize(
+  hotel_bookings,
+  mean(lead_time),
+  median(lead_time)
+  )
 ```
 
 Note how the variables names in this table is not easy to read. 
@@ -723,9 +735,11 @@ Note how the variables names in this table is not easy to read.
 In order to display the variable names more legibly in the output, we can assign variable names to numerical summaries (e.g. `mean_lead_time`).
 
 ```{r}
-summarize(hotel_bookings,
-          mean_lead_time = mean(lead_time),
-          med_lead_time = median(lead_time))
+summarize(
+  hotel_bookings,
+  mean_lead_time = mean(lead_time),
+  med_lead_time = median(lead_time)
+  )
 ```
 
 ## Learning Tip of the Day

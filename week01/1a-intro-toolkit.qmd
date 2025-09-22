@@ -230,8 +230,10 @@ n_apples <- c(7, my_apples, 3)
 
 names <- c("Menglin", "Gloria", "Robert")
 
-data.frame(person = names, 
-           apple_count = n_apples)
+data.frame(
+  person = names, 
+  apple_count = n_apples
+  )
 ```
 :::
 
